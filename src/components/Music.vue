@@ -106,6 +106,12 @@ export default {
           url: "/src/assets/music/陶喆 - 寂寞的季节.mp3",
           cover: "/src/assets/music/vue.svg"
         },
+        {
+          title: "小宇",
+          artist: "蓝心羽",
+          url: "/src/assets/music/蓝心羽 - 小宇.mp3",
+          cover: "/src/assets/music/vue.svg"
+        },
         // Add more tracks as needed
       ],
       currentTime: 0,

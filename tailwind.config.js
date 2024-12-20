@@ -3,7 +3,10 @@
 
 export default {
   content: ['./src/**/*.{vue,js,ts}'],
-  plugins: [require('daisyui')],
+  plugins: [
+    require('daisyui'),
+    require('@tailwindcss/line-clamp'),
+  ],
   daisyui: {
     themes: ["light", "dark", "cupcake"],
     // darkTheme: "dark", // name of one of the included themes for dark mode

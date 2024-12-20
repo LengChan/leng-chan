@@ -8,7 +8,7 @@
           <li><a href="/about" class="hover:text-primary transition-colors">About</a></li>
           <li><a href="/music" class="hover:text-primary transition-colors">Music</a></li>
           <li><a href="#projects" class="hover:text-primary transition-colors">Projects</a></li>
-          <li><a href="#blog" class="hover:text-primary transition-colors">Blog</a></li>
+          <li><a href="/blog" class="hover:text-primary transition-colors">Blog</a></li>
         </ul>
       </nav>
     </header>
