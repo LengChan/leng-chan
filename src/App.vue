@@ -1,3 +1,7 @@
+<script setup>
+import Light from './components/Light.vue'
+</script>
+
 <template>
   <div class="min-h-screen bg-base-100">
     <!-- Header Navigation -->
@@ -5,11 +9,12 @@
       <nav class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
         <a href="/" class="text-xl font-bold">Leng Chan</a>
         <ul class="flex gap-6">
-          <li><a href="/about" class="hover:text-primary transition-colors">About</a></li>
-          <li><a href="/music" class="hover:text-primary transition-colors">Music</a></li>
-          <li><a href="#projects" class="hover:text-primary transition-colors">Projects</a></li>
-          <li><a href="/blog" class="hover:text-primary transition-colors">Blog</a></li>
+          <li><RouterLink to="/about" class="hover:text-primary transition-colors">About</RouterLink></li>
+          <li><RouterLink to="/music" class="hover:text-primary transition-colors">Music</RouterLink></li>
+          <li><RouterLink to="#projects" class="hover:text-primary transition-colors">Projects</RouterLink></li>
+          <li><RouterLink to="/blog" class="hover:text-primary transition-colors">Blog</RouterLink></li>
         </ul>
+        <Light />
       </nav>
     </header>
 

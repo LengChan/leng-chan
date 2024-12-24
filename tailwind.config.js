@@ -7,6 +7,7 @@ export default {
     require('daisyui'),
     require('@tailwindcss/line-clamp'),
   ],
+  darkMode: 'class',
   daisyui: {
     themes: ["light", "dark", "cupcake"],
     // darkTheme: "dark", // name of one of the included themes for dark mode

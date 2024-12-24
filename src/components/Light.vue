@@ -1,7 +1,7 @@
 <template>
-  <label class="swap swap-rotate absolute right-10 top-5">
+  <label class="swap swap-rotate absolute right-10 top-5 dark">
     <!-- this hidden checkbox controls the state -->
-    <input type="checkbox" class="theme-controller" value="dark" />
+    <input type="checkbox" class="theme-controller" value="dark" v-model="isDarkMode" @change="toggleTheme" />
 
     <!-- sun icon -->
     <svg
@@ -22,6 +22,36 @@
     </svg>
   </label>
 </template>
+
+<script setup>
+import { ref, onMounted } from 'vue'
+
+const isDarkMode = ref(false)
+
+const toggleTheme = () => {
+  const isDark = isDarkMode.value;
+  document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light')
+  // Add or remove text-white class on body
+  document.body.classList.toggle('text-white', isDark)
+  localStorage.setItem('theme', isDark ? 'dark' : 'light')
+}
+
+onMounted(() => {
+  const savedTheme = localStorage.getItem('theme')
+  if (savedTheme) {
+    isDarkMode.value = savedTheme === 'dark'
+    document.documentElement.setAttribute('data-theme', savedTheme)
+    // Add text-white class if theme is dark
+    document.body.classList.toggle('text-white', savedTheme === 'dark')
+  } else {
+    isDarkMode.value = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isDark = isDarkMode.value
+    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light')
+    // Add text-white class if system theme is dark
+    document.body.classList.toggle('text-white', isDark)
+  }
+})
+</script>
 
 
 
