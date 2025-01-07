@@ -87,6 +87,9 @@
 </template>
 
 <script>
+function resolveAsset(path) {
+  return new URL(path, import.meta.url).href;
+}
 export default {
   data() {
     return {
@@ -97,20 +100,20 @@ export default {
         {
           title: "真的爱着你",
           artist: "明慧",
-          url: "/src/assets/music/background.mp3",
-          cover: "/src/assets/music/andrew.jpg"
+          url: resolveAsset('../assets/music/background.mp3'),
+          cover: resolveAsset("../assets/music/andrew.jpg")
         },
         {
           title: "寂寞的季节",
           artist: "陶喆",
-          url: "/src/assets/music/陶喆 - 寂寞的季节.mp3",
-          cover: "/src/assets/music/vue.svg"
+          url: resolveAsset("../assets/music/陶喆 - 寂寞的季节.mp3"),
+          cover: resolveAsset("../assets/music/vue.svg")
         },
         {
           title: "小宇",
           artist: "蓝心羽",
-          url: "/src/assets/music/蓝心羽 - 小宇.mp3",
-          cover: "/src/assets/music/vue.svg"
+          url: resolveAsset("../assets/music/蓝心羽 - 小宇.mp3"),
+          cover: resolveAsset("../assets/music/vue.svg")
         },
         // Add more tracks as needed
       ],
