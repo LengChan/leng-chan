@@ -18,7 +18,7 @@ export default {
     onMounted(async () => {
       try {
         const postId = route.params.id
-        const response = await fetch(`/src/contents/posts/${postId}.md`)
+        const response = await fetch(`/posts/${postId}.md`)
         if (!response.ok) {
           throw new Error('Post not found')
         }
@@ -40,6 +40,7 @@ export default {
 .post-container {
   max-width: 800px;
   margin: 0 auto;
+  text-align: left;
   padding: 40px;
 }
 

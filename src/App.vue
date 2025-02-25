@@ -11,7 +11,7 @@ import Light from './components/Light.vue'
         <ul class="flex gap-6">
           <li><RouterLink to="/about" class="hover:text-primary transition-colors">About</RouterLink></li>
           <li><RouterLink to="/music" class="hover:text-primary transition-colors">Music</RouterLink></li>
-          <li><RouterLink to="#projects" class="hover:text-primary transition-colors">Projects</RouterLink></li>
+          <li><RouterLink to="/projects" class="hover:text-primary transition-colors">Projects</RouterLink></li>
           <li><RouterLink to="/blog" class="hover:text-primary transition-colors">Blog</RouterLink></li>
         </ul>
         <Light />
